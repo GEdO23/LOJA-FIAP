@@ -7,7 +7,7 @@ import App from './App.jsx'
 import Error from './routes/Error/index.jsx'
 import Aparelhos from './routes/Aparelhos/index.jsx'
 import VisualizarAparelhos from './routes/Visualizar Aparelhos/index.jsx'
-import Home from './routes/home/index.jsx'
+import Home from './routes/Home/index.jsx'
 
 import './index.css'
 
