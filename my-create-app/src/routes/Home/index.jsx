@@ -1,5 +1,5 @@
 // rfc para criar uma nova export default function
-import Propaganda from './Propaganda'
+import Propaganda from '../../components/Propaganda'
 
 export default function Home() {
   return (
