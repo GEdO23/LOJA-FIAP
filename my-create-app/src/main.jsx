@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import App from './App.jsx'
-
+import Home from './routes/Home/index.jsx'
 import Error from './routes/Error/index.jsx'
 import Aparelhos from './routes/Aparelhos/index.jsx'
 import VisualizarAparelhos from './routes/Visualizar Aparelhos/index.jsx'
-import Home from './routes/Home/index.jsx'
 
 import './index.css'
 
@@ -16,8 +15,8 @@ const router = createBrowserRouter([
     path: "/", element: <App/>, errorElement: <Error/>, 
     children: [
       {path: "/", element: <Home/>},
-      {path: "/Aparelhos", element: <Aparelhos/>},
-      {path: "/Aparelhos/VisualizarAparelhos", element: <VisualizarAparelhos/>}
+      {path: "/aparelhos", element: <Aparelhos/>},
+      {path: "/aparelhos/visualizar/:id", element: <VisualizarAparelhos/>}
     ]}
 ])
 
