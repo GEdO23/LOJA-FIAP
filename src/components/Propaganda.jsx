@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom"
 import { listaAparelhos } from './AparelhosData';
 import "./Propaganda.css"
+import PropTypes from 'prop-types';
 
 export default function Propaganda(props) {
   // ao chamar <Propaganda/>, o id deverá ser mencionado para identificar qual propaganda mostrar
-  const dataAparelho = listaAparelhos[props.id];
-
+  Propaganda.propTypes = {
+    id: PropTypes.number.isRequired,
+  };
+  
+  const currentId = props.id;
+  const dataAparelho = listaAparelhos[currentId];
+  
   return (
     <section className="propaganda-secao">
       <section className="propaganda-lateral">
@@ -25,3 +31,4 @@ export default function Propaganda(props) {
     </section>
   )
 }
+
