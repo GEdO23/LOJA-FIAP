@@ -1,38 +1,23 @@
-export default function Propaganda() {
+import { Link, useParams } from "react-router-dom"
+import { propags } from "./PropagandasData"
+import "./Propaganda.css"
 
-  // eslint-disable-next-line no-unused-vars
-  const propags = [
-    {
-      id: 1,
-      titulo: 'Teclado Inovador!',
-      subtitulo: 'Digitando com novas cores.',
-      desc: 'Novo teclado que brilha com luzes rgb é lançado e disponibilizado para o público gamer',
-      redirectLink: '#',
-      imgSrc: '#',
-      imgAlt: 'Teclado com teclas RGB'
-    },
-    {
-      id: 2,
-      titulo: 'Mouse Mouse?',
-      subtitulo: 'Esse tem medo de gato',
-      desc: 'Mouse em formato de rato é criado, e o público vai a gargalhada com esta nova peça no mercado',
-      imgAlt: 'Teclado com teclas RGB',
-      imgSrc: '#',
-      redirectLink: '#'
-    }
-  ];
+export default function Propaganda(props) {
+  // ao chamar <Propaganda/>, o id deverá ser mencionado para identificar qual propaganda mostrar
+  const propagAtual = propags[props.id];
 
   return (
     <section className="propaganda-secao">
-        <section className="propaganda-lateral">
-          <h2 className="propaganda-tit">Titulo</h2>
-          <h3 className="propaganda-subtit">Subtitulo</h3>
-          <a href="#">Mais detalhes</a>
-          <p className="propaganda-desc">Descricao</p>
-        </section>
-        <section className="propaganda-lateral">
-          <img src="#" alt="Imagem do Item" />
-        </section>
+      <section className="propaganda-lateral">
+        <h2 className="propaganda-tit">{`${propagAtual.tit}`}</h2>
+        <Link to={`/produtos/editar/${props.id}`}>Clique aqui para ver mais</Link>
+      </section>
+      <section className="propaganda-lateral">
+        <img className="img-propaganda" src={propagAtual.imgSrc} alt={`${propagAtual.imgAlt}`} />
+        <h3 className="preco-original">R${`${propagAtual.precOrig}`}</h3>
+        <h2 className="preco-desconto">R${`${propagAtual.precDescont}`}</h2>
+      </section>
+
     </section>
   )
 }

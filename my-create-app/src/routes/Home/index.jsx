@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <main>
       <div className="propaganda-popup">
-        <Propaganda />
-        <Propaganda />
+        <Propaganda id={0}/>
+        <Propaganda id={1}/>
       </div>
     </main>
   )
