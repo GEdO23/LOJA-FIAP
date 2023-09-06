@@ -1,13 +1,28 @@
+.propaganda-popup {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    justify-content: center;
+}
+
+
 .propaganda-secao {
     display: flex;
     margin: 50px 0;
     gap: 100px;
-    justify-content: center;
+}
+
+.propaganda-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .img-propaganda {
     width: 200px;
     border-radius: 20px;
+    opacity: .8;
 }
 
 .preco-original {
