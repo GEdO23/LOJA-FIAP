@@ -1,0 +1,20 @@
+.propaganda-secao {
+    display: flex;
+    margin: 50px 0;
+    gap: 100px;
+    justify-content: center;
+}
+
+.img-propaganda {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.preco-original {
+    text-decoration: line-through;
+    color: rgb(160, 26, 26);
+}
+
+.preco-desconto {
+    text-decoration: underline;
+}
