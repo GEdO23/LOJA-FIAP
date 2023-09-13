@@ -1,85 +1,69 @@
-* {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-:root {
-  --tit-cor-fiap: #ed1164;
-  --txt-cor-fiap: #ebebeb;
-  --bgnd-fiap: #151819;
-
-  --tit-cor-error: #db2727;
-  --link-cor: #165bdd;
-
-  --dflt-txt-size: 16px;
-  --tit-size: calc(var(--dflt-txt-size)*2);
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
 body {
-  font-size: var(--dflt-txt-size);
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bgnd-fiap);
-  color: var(--txt-cor-fiap);
-}
-
-main, header, footer {
-  padding: 15px;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 h1 {
-  font-size: var(--tit-size);
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-h1, a {
-  color: var(--tit-cor-fiap);
-  text-decoration: none;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-#err-tit{
-  color: var(--tit-cor-error);
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
-#err-link {
-  color: var(--link-cor);
-}
-
-header {
-  position: relative;
-  top: 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 40px;
-  
-  background: rgb(0, 0, 0);
-  opacity: .5;
-  z-index: 1;
-}
-
-.cabec-menu {
-  width: 50dvw;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100vw;
-  height: 40px;
-
-  background: rgb(0, 0, 0);
-  opacity: .5;
-  z-index: 1;
-}
-
-

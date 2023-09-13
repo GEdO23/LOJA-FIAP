@@ -1,17 +1,20 @@
-import { Link } from 'react-router-dom'
-import '../index.css'
+import { Link } from "react-router-dom";
 
-export default function Cabecalho() {
-  return (
-    <header>
+export default function Cabecalho(){
 
-      <h1 id='cabec-tit'>LOJA FIAP</h1>
+    return(
+        <>
+            <header className="cabecalho">
+                <h1>Vite + React</h1>
+                <ul>
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/produtos">PRODUTOS</Link></li>
+                    <li><Link to="/editar/produto/1">Produto - 1</Link></li>
+                    <li><Link to="/editar/produto/2">Produto - 2</Link></li>
+                    <li><Link to="/editar/produto/3">Produto - 3</Link></li>
+                </ul>
+            </header>
 
-      <div className='cabec-menu'>
-        <Link to='/' className='cabec-link'>HOME</Link>
-        <Link to='/aparelhos' className='cabec-link'>APARELHOS</Link>
-      </div>
-
-    </header>
-  )
+        </>
+    )
 }
