@@ -13,6 +13,4 @@ export const ListaProdutos = [
   {id:11, nome: 'Memória RAM', desc: 'Memória RAM Gamer', preco: 300, img: 'https://picsum.photos/200/300'},
   {id:12, nome: 'Fonte', desc: 'Fonte Gamer', preco: 200, img: 'https://picsum.photos/200/300'},
   {id:13, nome: 'SSD', desc: 'SSD Gamer', preco: 200, img: 'https://picsum.photos/200/300'}
-
-
 ]

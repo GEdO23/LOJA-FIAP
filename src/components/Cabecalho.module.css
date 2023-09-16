@@ -1,0 +1,29 @@
+.cabecalho {
+    width: 100%;
+    margin-bottom: 3vh;
+    padding: 3vh 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 2px solid #dfa678;
+    background: #ffcba0;
+
+    & h1 {
+        user-select: none;
+    }
+
+    & ul {
+        display: flex;
+        justify-content: right;
+        list-style-type: none;
+        gap: 50px;
+
+        .link {
+            color: #80410e;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+}

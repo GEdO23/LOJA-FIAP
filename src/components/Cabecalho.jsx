@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
+import style from "./Cabecalho.module.css";
 
 export default function Cabecalho(){
 
     return(
         <>
-            <header className="cabecalho">
+            <header className={style.cabecalho}>
                 <h1>Vite + React</h1>
                 <ul>
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/produtos">PRODUTOS</Link></li>
-                    <li><Link to="/editar/produto/1">Produto - 1</Link></li>
-                    <li><Link to="/editar/produto/2">Produto - 2</Link></li>
-                    <li><Link to="/editar/produto/3">Produto - 3</Link></li>
+                    <li><Link to="/" className={style.link}>HOME</Link></li>
+                    <li><Link to="/produtos" className={style.link}>PRODUTOS</Link></li>
                 </ul>
             </header>
 
