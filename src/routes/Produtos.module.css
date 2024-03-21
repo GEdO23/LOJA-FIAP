@@ -1,0 +1,59 @@
+.pagina {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .btn {
+        display: flex;
+        gap: 20px;
+    }
+
+    .tblProd{
+        border-collapse: collapse;
+        margin: 0 auto;
+        border: 2px solid #ccc;
+
+        
+        .tblCabecalho {
+            background: #ecb15f;
+            & th {
+                border: 2px solid #ccc;
+                text-align: center;
+            }
+        }
+        
+        .tblCorpo {
+            & tr {
+                height: 48px !important;
+                &:hover {
+                    background-color: #fee;
+                }
+
+                & td {
+                    border: 2px solid #ccc;
+                    
+                    & img {
+                        width: 30%;
+                        transition: 1s;
+                        &:hover {
+                            transition: 3s;
+                            width: 100%;
+                        }
+                    }
+
+                    &:first-child {
+                        text-align: center;
+                    }
+
+                    &:last-child {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .tblRodape {
+            background-color: #ecb15f;
+        }
+    }
+}
